@@ -11,3 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export PATH=${PATH}:/usr/local/mysql/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias cl="clear"
+alias dot="/usr/local/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias dotadd=". ~/bin/quick_commit"
+alias gs="git status"
+alias ide="source $HOME/bin/tmx/ide"
+alias planckadd="source $HOME/bin/qmk_planck.sh"
+alias npml="npm list --depth=0 2>/dev/null"
+alias npmg="npm list -g --depth=0 2>/dev/null"
+alias picker="npm run --prefix ~/Dropbox/_rpp/flower-picker/ start"
+alias src="exec zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
