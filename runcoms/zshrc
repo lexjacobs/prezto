@@ -27,6 +27,7 @@ alias npml="npm list --depth=0 2>/dev/null"
 alias npmg="npm list -g --depth=0 2>/dev/null"
 alias picker="npm run --prefix ~/Dropbox/_rpp/flower-picker/ start"
 alias src="exec zsh"
+alias gd="git diff -- ':!package-lock.json' ':!yarn.lock'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
