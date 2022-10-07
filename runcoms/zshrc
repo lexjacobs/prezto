@@ -28,6 +28,7 @@ alias npmg="npm list -g --depth=0 2>/dev/null"
 alias picker="npm run --prefix ~/Dropbox/_rpp/flower-picker/ start"
 alias src="exec zsh"
 alias gd="git diff -- ':!package-lock.json' ':!yarn.lock'"
+alias disp="~/Desktop/detect-displays.command"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
