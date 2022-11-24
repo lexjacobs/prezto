@@ -17,6 +17,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# homebrew no auto update!
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 alias cl="clear"
 alias dot="/usr/local/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias dotadd=". ~/bin/quick_commit"
