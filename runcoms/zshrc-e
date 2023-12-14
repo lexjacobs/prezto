@@ -38,30 +38,3 @@ alias disp="~/Desktop/detect-displays.command"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-[ -f "/Users/aj/.ghcup/env" ] && source "/Users/aj/.ghcup/env" # ghcup-env
-
-###########
-# chruby
-###########
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-
-# To enable auto-switching of Rubies specified by .ruby-version files,
-# add the following to ~/.bash_profile or ~/.zshrc:
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
-# choose ruby version
-chruby ruby-3.2.2
-
-# if trying to install a ruby version older than 3.1.3, 3.0.5, or 2.7.7
-# (but not 2.6.x or older), then you’ll need to install Ruby like this:
-# ruby-install 3.1.2 -- --enable-shared
-# from https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#how-to-install-different-versions-of-ruby-and-switch-between-them
-
-# pnpm
-export PNPM_HOME="/Users/aj/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
